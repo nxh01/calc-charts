@@ -1,0 +1,28 @@
+a,
+a:hover,
+a::after,
+a::before,
+a:visited,
+a:focus,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+a {
+  font-family: $font-light;
+}
+h1 {
+  color: $main-text-color;
+  font-family: $font-bold;
+  font-weight: normal;
+}
+h2 {
+  color: $secondary-text-color;
+  font-family: $font-light;
+  font-size: $s-font-size;
+  font-weight: lighter;
+}
+p {
+  font-family: $font-light;
+}

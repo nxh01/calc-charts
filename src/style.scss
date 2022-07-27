@@ -1,0 +1,20 @@
+// Importing Abstracts Folder
+@import "./scss/abstracts/variables";
+
+// Importing Base Folder
+@import "./scss/base/base";
+@import "./scss/base/typography";
+
+// Importing Components Folder
+@import "./scss/components/buttons";
+
+// Importing Sections Folder
+@import "./scss/sections/navbar";
+@import "./scss/sections/home";
+@import "./scss/sections/tryDemo";
+@import "./scss/sections/aboutUs";
+@import "./scss/sections/download";
+@import "./scss/sections/prices";
+
+// Importing Layout Folder
+@import "./scss/layout/footer";

@@ -1,0 +1,193 @@
+@font-face {
+  font-family: "Avant-bold";
+  src: url("/src/assets/fonts/AvantGarde-Bold.otf");
+}
+@font-face {
+  font-family: "Avant-light";
+  src: url("/src/assets/fonts/AvantGarde-Book.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: 0.65s all ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #141a26;
+}
+
+a,
+a:hover,
+a::after,
+a::before,
+a:visited,
+a:focus,
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  font-family: "Avant-light";
+}
+
+h1 {
+  color: #ffffff;
+  font-family: "Avant-bold";
+  font-weight: normal;
+}
+
+h2 {
+  color: #d6d6d6;
+  font-family: "Avant-light";
+  font-size: 1.5625rem;
+  font-weight: lighter;
+}
+
+p {
+  font-family: "Avant-light";
+}
+
+.btn {
+  width: 200px;
+  height: 55px;
+  background-color: #6c63ff;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: "Avant-light";
+  color: #ffffff;
+}
+.btn .btn-icon {
+  color: #ffffff;
+}
+.btn:hover {
+  background-color: #2f2c55;
+  color: #d6d6d6;
+  box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.01), 0px 0px 6.9px rgba(0, 0, 0, 0.018), 0px 0px 14.2px rgba(0, 0, 0, 0.026), 0px 0px 29.2px rgba(0, 0, 0, 0.036), 0px 0px 80px rgba(0, 0, 0, 0.06);
+}
+.btn:hover .btn-icon {
+  color: #d6d6d6;
+}
+
+nav {
+  width: 100%;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+nav .nav__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav .nav__container .nav__menu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+nav .nav__container .nav__menu a {
+  font-size: 1.875rem;
+  font-family: "Avant-light";
+  color: #ffffff;
+  position: relative;
+}
+nav .nav__container .nav__menu a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  background-color: #6c63ff;
+  transition: 0.7s;
+}
+nav .nav__container .nav__menu a:hover {
+  color: #d6d6d6;
+}
+nav .nav__container .nav__menu a:hover::before {
+  width: 100%;
+  transition: 0.7s;
+}
+nav .nav__container a h1 {
+  font-family: "Avant-light" !important;
+  font-size: 1.875rem !important;
+  letter-spacing: -1.2px;
+}
+nav .nav__container a:hover h1 {
+  color: #6c63ff;
+}
+
+.show-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.hidden-nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -20rem;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .home__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .home__container .home__info {
+  display: flex;
+  flex-direction: column;
+}
+header .home__container .home__info h1 {
+  max-width: 473px;
+  font-size: 3.125rem;
+  color: #ffffff;
+  font-family: "Avant-bold";
+}
+header .home__container .home__info h1 span {
+  color: #6c63ff;
+  font-family: "Avant-light" !important;
+}
+header .home__container .home__info a {
+  padding-top: 25px;
+}
+header .home__container .home__info h2 {
+  font-size: 1.5625rem;
+  font-family: "Avant-light" !important;
+  color: #d6d6d6;
+  letter-spacing: 0px;
+}
+header .home__container .home__svg svg {
+  width: 538px;
+  height: 433px;
+}
+
+.home__svg svg .pie-chart:hover {
+  transform: scale(1.04);
+  transform-origin: center;
+}/*# sourceMappingURL=style.css.map */
