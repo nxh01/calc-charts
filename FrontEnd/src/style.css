@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Avant-bold";
-  src: url("/src/assets/fonts/AvantGarde-Bold.otf");
+  src: url("/FrontEnd/src/assets/fonts/AvantGarde-Bold.otf");
 }
 @font-face {
   font-family: "Avant-light";
-  src: url("/src/assets/fonts/AvantGarde-Book.ttf");
+  src: url("/FrontEnd/src/assets/fonts/AvantGarde-Book.ttf");
 }
 * {
   box-sizing: border-box;
@@ -158,43 +158,43 @@ nav .nav__container a:hover h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-header {
+.home__header {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-header .home__container {
+.home__header .home__container {
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-header .home__container .home__info {
+.home__header .home__container .home__info {
   display: flex;
   flex-direction: column;
 }
-header .home__container .home__info h1 {
+.home__header .home__container .home__info h1 {
   max-width: 473px;
   font-size: 3.125rem;
   color: #ffffff;
   font-family: "Avant-bold";
 }
-header .home__container .home__info h1 span {
+.home__header .home__container .home__info h1 span {
   color: #6c63ff;
   font-family: "Avant-light" !important;
 }
-header .home__container .home__info a {
+.home__header .home__container .home__info a {
   padding-top: 25px;
 }
-header .home__container .home__info h2 {
+.home__header .home__container .home__info h2 {
   font-size: 1.5625rem;
   font-family: "Avant-light" !important;
   color: #d6d6d6;
   letter-spacing: 0px;
 }
-header .home__container .home__svg svg {
+.home__header .home__container .home__svg svg {
   width: 538px;
   height: 433px;
 }
@@ -581,6 +581,130 @@ header .home__container .home__svg svg {
 .prices-icon {
   font-size: 20px;
   color: #6c63ff !important;
+}
+
+.upload__header {
+  width: 100%;
+  padding: 50px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 80px;
+}
+.upload__header .upload__title {
+  text-align: center;
+}
+.upload__header .upload__info {
+  width: 537px;
+  height: 394px;
+  background-color: rgba(35, 35, 35, 0.6);
+  border: 1px solid #363636;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.upload__header .upload__info .upload__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 30px;
+}
+.upload__header .upload__info .upload__content p {
+  font-size: 1.25rem;
+  color: #363636;
+  font-weight: lighter;
+  font-family: "Avant-light";
+}
+.upload__header .upload__info .upload__content h3 {
+  font-size: 1.25rem;
+  color: #ffffff;
+  font-family: "Avant-light";
+  font-weight: lighter;
+}
+.upload__header .upload__info .upload__content h3 span {
+  font-family: "Avant-bold" !important;
+  font-weight: bold;
+  position: relative;
+  padding: 10px;
+  margin-left: 5px;
+  color: #ffffff;
+  z-index: 5;
+}
+.upload__header .upload__info .upload__content h3 span::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(61, 61, 61, 0.63);
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.upload__header .upload__info .upload__content .upload-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.upload__header .upload__info .upload__premium {
+  width: 100%;
+  height: 100%;
+  background-color: #363636;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 10px 10px;
+}
+.upload__header .upload__info .upload__premium h1 {
+  font-size: 1.25rem;
+  font-weight: lighter;
+  font-family: "Avant-light";
+  color: #ffffff;
+}
+.upload__header .upload__info .upload__premium h1 span {
+  font-family: "Avant-bold";
+  font-weight: bold;
+}
+
+.graph__previews {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.graph__previews .graph__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.graph__previews .graph__container .graph__cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+.graph__previews .graph__container .graph__cards .graph__image {
+  width: 400px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.graph__previews .graph__container .graph__cards .graph__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 footer {

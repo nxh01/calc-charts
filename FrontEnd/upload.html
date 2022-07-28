@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Document Title -->
+    <title>NEJC</title>
+    <!-- Icon -->
+    <link rel="icon" href="./src/assets/img/WhiteLogo.ico">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./src/style.css">
+    <!-- UNICONS -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav__container">
+            <a href="./index.html">
+                <h1>NEJC</h1>
+            </a>
+            <div class="nav__mobile">
+
+            </div>
+            <ul class="nav__menu">
+                <li>
+                    <a href="./index.html">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="#prices">
+                        Prices
+                    </a>
+                </li>
+                <li>
+                    <a href="./tools.html">
+                        Tools
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <header class="upload__header">
+            <div class="upload__title">
+                <h1>Upload Your Data</h1>
+                <h2>Upload the data you need to generate</h2>
+            </div>
+            <form class="upload__info" id="upload" method="POST" enctype="multipart/form-data">
+                <div class="upload__content">
+                    <label class="btn upload-button" for="file-upload"><i class="uil uil-plus-circle btn-icon"></i>
+                        Upload</label>
+                    <input type="file" name="dataset" id="file-upload" hidden>
+                    <input type="submit" value="Apply" class="btn">
+                    <p>Max file size is 100 mb</p>
+                    <h3>Supported File Types: <span>.csv</span> <span>.xlsx</span></h3>
+                </div>
+                <div class="upload__premium">
+                    <img src="./src/assets/svg/premium.svg" alt="">
+                    <h1>Get <span>Premium Package</span> <br> To Upload more than <span>100 MB</span></h1>
+                </div>
+            </form>
+        </header>
+        <section class="graph__previews">
+            <div class="graph__container">
+                <div class="graph__cards">
+                    <div class="graph__image">
+                        <img id="line-graph" src="" alt="">
+                    </div>
+                    <div class="graph__image">
+                        <img id="bar-graph" src="" alt="">
+                    </div>
+                    <div class="graph__image">
+                        <img id="pie-graph" src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer__container">
+            <div class="footer__info">
+                <img src="./src/assets/img/logo.png" alt="">
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./tools.html">Tools</a>
+                    </li>
+                    <li>
+                        <a href="./upload.html">Upload</a>
+                    </li>
+                </ul>
+                <div class="footer__socials">
+                    <a href="">
+                        <i class="uil uil-github socials"></i>
+                    </a>
+                    <a href="">
+                        <i class="uil uil-facebook socials"></i>
+                    </a>
+                    <a href="">
+                        <i class="uil uil-instagram socials"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__credits">
+                <h2>© 2022 <a href="#">NEJC</a>. All Rights Reserved️</h2>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./src/javascript/app.js"></script>
+</body>
+
+</html>
