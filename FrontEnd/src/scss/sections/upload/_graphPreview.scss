@@ -2,12 +2,27 @@
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 80px;
+  padding-bottom: 60px;
+  .graph__title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      font-size: $l-font-size;
+      font-family: $font-bold;
+      font-weight: bold;
+    }
+  }
   .graph__container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 80px;
     .graph__cards {
       display: flex;
       justify-content: center;
@@ -16,11 +31,34 @@
       gap: 20px;
 
       .graph__image {
-        width: 400px;
+        width: 350px;
         height: 250px;
         object-fit: cover;
         overflow: hidden;
         border-radius: 10px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .line-graph {
+          &::before {
+            content: "Line Graph";
+          }
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color: #000000, $alpha: 0.6);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: $s-font-size;
+          color: $main-text-color;
+          font-weight: lighter;
+          font-family: $font-light;
+        }
         img {
           width: 100%;
           height: 100%;

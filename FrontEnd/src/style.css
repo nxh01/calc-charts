@@ -677,13 +677,28 @@ nav .nav__container a:hover h1 {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 80px;
+  padding-bottom: 60px;
+}
+.graph__previews .graph__title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.graph__previews .graph__title h1 {
+  font-size: 2.5rem;
+  font-family: "Avant-bold";
+  font-weight: bold;
 }
 .graph__previews .graph__container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 80px;
 }
 .graph__previews .graph__container .graph__cards {
   display: flex;
@@ -693,12 +708,33 @@ nav .nav__container a:hover h1 {
   gap: 20px;
 }
 .graph__previews .graph__container .graph__cards .graph__image {
-  width: 400px;
+  width: 350px;
   height: 250px;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
   border-radius: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.graph__previews .graph__container .graph__cards .graph__image .line-graph::before {
+  content: "Line Graph";
+}
+.graph__previews .graph__container .graph__cards .graph__image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5625rem;
+  color: #ffffff;
+  font-weight: lighter;
+  font-family: "Avant-light";
 }
 .graph__previews .graph__container .graph__cards .graph__image img {
   width: 100%;
