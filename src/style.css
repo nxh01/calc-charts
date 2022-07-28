@@ -35,6 +35,9 @@ li {
 
 a {
   font-family: "Avant-light";
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 h1 {
@@ -144,6 +147,9 @@ nav .nav__container a:hover h1 {
   position: -webkit-sticky;
   position: sticky;
   top: -20rem;
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 header {
@@ -306,4 +312,13 @@ header .home__container .home__svg svg {
   font-family: "Avant-bold";
   font-weight: 500;
   color: #ffffff;
+}
+
+.download {
+  width: 100%;
+  background-image: url(/src/assets/svg/download/downvector.svg);
+  background-repeat: no-repeat;
+  background-position: top;
+  padding: 130px 0px;
+  background-color: purple;
 }/*# sourceMappingURL=style.css.map */

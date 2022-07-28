@@ -65,4 +65,7 @@ nav {
 .hidden-nav {
   position: sticky;
   top: -20rem;
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
 }
