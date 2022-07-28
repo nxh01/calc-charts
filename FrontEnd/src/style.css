@@ -57,6 +57,10 @@ p {
   font-family: "Avant-light";
 }
 
+.icons {
+  font-size: 15px;
+}
+
 .btn {
   width: 200px;
   height: 55px;
@@ -71,6 +75,7 @@ p {
   color: #ffffff;
 }
 .btn .btn-icon {
+  font-size: 20px;
   color: #ffffff;
 }
 .btn:hover {
@@ -317,5 +322,110 @@ header .home__container .home__svg svg {
 .download {
   width: 100%;
   padding: 130px 0px;
-  background-color: purple;
+  background-color: #171e2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download .download__container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 60px;
+}
+.download .download__container .download__title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 65px;
+}
+.download .download__container .download__title h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Avant-bold";
+}
+.download .download__container .download__title h2 {
+  font-size: 1.5625rem;
+  font-weight: lighter;
+  font-family: "Avant-light";
+  color: #d6d6d6;
+}
+.download .download__container .download__info {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.download .download__container .download__info .download__text {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.download .download__container .download__info .download__text p {
+  font-size: 1.5625rem;
+  color: #d6d6d6;
+  font-weight: lighter;
+  font-family: "Avant-light";
+  max-width: 520px;
+}
+.download .download__container .download__info .download__text p span {
+  font-family: "Avant-bold" !important;
+  font-weight: bold;
+  color: #ffffff !important;
+}
+.download .download__container .download__info .download__text .download__buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.download__vector {
+  width: 100%;
+  height: 100%;
+  font-size: 0px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.download__vector img {
+  width: 100%;
+  height: 100%;
+}
+
+.download__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.download__btn:hover {
+  cursor: not-allowed;
+}
+.download__btn:hover::before {
+  opacity: 100;
+  transition: 0.6s ease-in-out;
+}
+.download__btn::before {
+  content: "Very Soon";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  top: 0;
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 1.25rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.6s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

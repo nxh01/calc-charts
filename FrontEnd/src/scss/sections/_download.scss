@@ -1,6 +1,108 @@
 .download {
   width: 100%;
-
   padding: 130px 0px;
-  background-color: purple;
+  background-color: $secondary-body-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .download__container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    .download__title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-left: 65px;
+      h1 {
+        font-size: $l-font-size;
+        font-weight: bold;
+        color: $main-text-color;
+        font-family: $font-bold;
+      }
+      h2 {
+        font-size: $s-font-size;
+        font-weight: lighter;
+        font-family: $font-light;
+        color: $secondary-text-color;
+      }
+    }
+    .download__info {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .download__text {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        align-items: flex-start;
+        justify-content: center;
+        p {
+          font-size: $s-font-size;
+          color: $secondary-text-color;
+          font-weight: lighter;
+          font-family: $font-light;
+          max-width: 520px;
+          span {
+            font-family: $font-bold !important;
+            font-weight: bold;
+            color: $main-text-color !important;
+          }
+        }
+        .download__buttons {
+          display: flex;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
+.download__vector {
+  width: 100%;
+  height: 100%;
+  font-size: 0px;
+  object-fit: cover;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.download__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &:hover {
+    cursor: not-allowed;
+    &::before {
+      opacity: 100;
+      transition: 0.6s ease-in-out;
+    }
+  }
+  &::before {
+    content: "Very Soon";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba($color: #000000, $alpha: 0.4);
+    bottom: 0;
+    top: 0;
+    color: $main-text-color;
+    font-weight: lighter;
+    font-size: $xs-font-size;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+  }
 }
