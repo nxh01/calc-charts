@@ -1,0 +1,103 @@
+footer {
+  width: 100%;
+  padding: 100px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $secondary-body-color;
+  .footer__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+    .footer__info {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: row;
+      img {
+        width: 91px;
+        height: 96px;
+      }
+      ul {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        a {
+          font-size: $s-font-size;
+          color: $main-text-color;
+          font-weight: lighter;
+          font-family: $font-light;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            background-color: $secondary-main-color;
+            transition: 0.7s;
+          }
+          &:hover {
+            &::before {
+              width: 100%;
+              transition: 0.7s;
+            }
+            color: $secondary-text-color;
+          }
+        }
+      }
+      .footer__socials {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        .socials {
+          font-size: 35px;
+          color: $main-text-color;
+          &:hover {
+            color: $secondary-main-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer__credits {
+  padding-bottom: 10px;
+  h2 {
+    color: $secondary-text-color;
+    font-size: $xs-font-size;
+    font-family: $font-light;
+    font-weight: lighter;
+    a {
+      font-size: $xs-font-size;
+      letter-spacing: -1px;
+      color: $main-text-color !important;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        background-color: $secondary-main-color;
+        transition: 0.7s;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+          transition: 0.7s;
+        }
+        color: $secondary-text-color;
+      }
+    }
+  }
+}
