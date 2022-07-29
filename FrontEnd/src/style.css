@@ -82,6 +82,7 @@ p {
   background-color: #2f2c55;
   color: #d6d6d6;
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.01), 0px 0px 6.9px rgba(0, 0, 0, 0.018), 0px 0px 14.2px rgba(0, 0, 0, 0.026), 0px 0px 29.2px rgba(0, 0, 0, 0.036), 0px 0px 80px rgba(0, 0, 0, 0.06);
+  padding-bottom: 5px;
 }
 .btn:hover .btn-icon {
   color: #d6d6d6;
@@ -233,6 +234,10 @@ nav .nav__container a:hover h1 {
   align-items: center;
   justify-content: space-around;
 }
+.calculate .calculate__info .calculate__svg img:hover {
+  transform: rotate(360deg);
+  transition: 0.7s all ease-in-out;
+}
 .calculate .calculate__info .calculate__text {
   width: 537px;
   height: 251px;
@@ -309,6 +314,9 @@ nav .nav__container a:hover h1 {
   align-items: center;
   width: 100%;
 }
+.about .about__container .about__info img:hover {
+  transform: scale(1.1);
+}
 .about .about__container .about__info p {
   font-size: 1.5625rem;
   color: #d6d6d6;
@@ -334,14 +342,15 @@ nav .nav__container a:hover h1 {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  gap: 60px;
+  gap: 90px;
 }
 .download .download__container .download__title {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
-  padding-left: 65px;
 }
 .download .download__container .download__title h1 {
   font-size: 2.5rem;
@@ -586,6 +595,7 @@ nav .nav__container a:hover h1 {
 .upload__header {
   width: 100%;
   padding: 50px 0px;
+  padding-bottom: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -679,7 +689,7 @@ nav .nav__container a:hover h1 {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 80px;
+  gap: 30px;
   padding-bottom: 60px;
 }
 .graph__previews .graph__title {
@@ -707,36 +717,28 @@ nav .nav__container a:hover h1 {
   width: 100%;
   gap: 20px;
 }
-.graph__previews .graph__container .graph__cards .graph__image {
+.graph__previews .graph__container .graph__cards .graph__content {
   width: 350px;
-  height: 250px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  overflow: hidden;
-  border-radius: 10px;
-  position: relative;
+  height: 450px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
-.graph__previews .graph__container .graph__cards .graph__image .line-graph::before {
-  content: "Line Graph";
-}
-.graph__previews .graph__container .graph__cards .graph__image::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.graph__previews .graph__container .graph__cards .graph__content h1 {
   font-size: 1.5625rem;
   color: #ffffff;
   font-weight: lighter;
   font-family: "Avant-light";
 }
-.graph__previews .graph__container .graph__cards .graph__image img {
+.graph__previews .graph__container .graph__cards .graph__content .graph__img {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.graph__previews .graph__container .graph__cards .graph__content .graph__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

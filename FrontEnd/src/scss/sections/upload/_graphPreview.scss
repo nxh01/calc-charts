@@ -4,7 +4,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 80px;
+  gap: 30px;
   padding-bottom: 60px;
   .graph__title {
     display: flex;
@@ -29,40 +29,30 @@
       align-items: center;
       width: 100%;
       gap: 20px;
-
-      .graph__image {
+      .graph__content {
         width: 350px;
-        height: 250px;
-        object-fit: cover;
-        overflow: hidden;
-        border-radius: 10px;
-        position: relative;
+        height: 450px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        .line-graph {
-          &::before {
-            content: "Line Graph";
-          }
-        }
-        &::before {
-          position: absolute;
-          content: "";
-          width: 100%;
-          height: 100%;
-          background-color: rgba($color: #000000, $alpha: 0.6);
-          display: flex;
-          align-items: center;
-          justify-content: center;
+        gap: 10px;
+        h1 {
           font-size: $s-font-size;
           color: $main-text-color;
           font-weight: lighter;
           font-family: $font-light;
         }
-        img {
+        .graph__img {
           width: 100%;
-          height: 100%;
-          object-fit: cover;
+          height: 250px;
+          overflow: hidden;
+          border-radius: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
