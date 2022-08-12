@@ -15,7 +15,7 @@
       width: 100%;
       gap: 20px;
 
-      .graph__image {
+      .graph__image { 
         width: 400px;
         height: 250px;
         object-fit: cover;
@@ -24,7 +24,7 @@
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit:contain;
         }
       }
     }
