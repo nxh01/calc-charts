@@ -2,18 +2,34 @@
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 30px;
+  padding-bottom: 60px;
+  .graph__title {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      font-size: $l-font-size;
+      font-family: $font-bold;
+      font-weight: bold;
+    }
+  }
   .graph__container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 80px;
     .graph__cards {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       gap: 20px;
+<<<<<<< HEAD
 
       .graph__image { 
         width: 400px;
@@ -25,6 +41,32 @@
           width: 100%;
           height: 100%;
           object-fit:contain;
+=======
+      .graph__content {
+        width: 350px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        h1 {
+          font-size: $s-font-size;
+          color: $main-text-color;
+          font-weight: lighter;
+          font-family: $font-light;
+        }
+        .graph__img {
+          width: 100%;
+          height: 250px;
+          overflow: hidden;
+          border-radius: 15px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+>>>>>>> f0014bcbc9371f3ce6ba315ebe89897a03570d44
         }
       }
     }

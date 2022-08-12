@@ -1,0 +1,92 @@
+.tools__header {
+  width: 100%;
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .tools__container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+    gap: 90px;
+    .tools__title {
+      width: 100%;
+      h1 {
+        font-size: $l-font-size;
+        color: $main-text-color;
+        font-family: $font-bold;
+        font-weight: bold;
+      }
+      h2 {
+        font-size: $s-font-size;
+        span {
+          color: $main-text-color;
+          font-family: $font-light;
+          letter-spacing: -2px;
+        }
+      }
+    }
+    .tools__wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      @media only screen and(max-width: 1040px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      gap: 70px 100px;
+      .tools__card {
+        width: 490px;
+        height: 410px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        border-radius: 15px;
+        &:hover {
+          transform: scale(1.1);
+          z-index: 50;
+          box-shadow: 0px 0.6px 3px rgba(0, 0, 0, 0.008),
+            0px 1.4px 7.1px rgba(0, 0, 0, 0.012),
+            0px 2.6px 13.4px rgba(0, 0, 0, 0.015),
+            0px 4.7px 23.9px rgba(0, 0, 0, 0.018),
+            0px 8.8px 44.7px rgba(0, 0, 0, 0.022),
+            0px 21px 107px rgba(0, 0, 0, 0.03);
+        }
+        .tools__subtitle-container {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 15px;
+          top: 0;
+          &:hover {
+            backdrop-filter: blur(5.8px);
+            -webkit-backdrop-filter: blur(5.8px);
+            h1 {
+              letter-spacing: 0.1rem;
+              color: $secondary-color;
+            }
+          }
+          h1 {
+            font-size: $m-font-size;
+            font-family: $font-bold;
+            font-weight: bold;
+            color: $main-text-color;
+          }
+        }
+        .tools__img {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}

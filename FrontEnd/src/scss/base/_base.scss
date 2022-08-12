@@ -10,3 +10,13 @@ html {
 body {
   background-color: $primary-body-color;
 }
+
+.container {
+  @media only screen and(max-width:1050px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+}

@@ -21,6 +21,16 @@ body {
   background-color: #141a26;
 }
 
+@media only screen and (max-width: 1050px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+}
+
 a,
 a:hover,
 a::after,
@@ -82,6 +92,7 @@ p {
   background-color: #2f2c55;
   color: #d6d6d6;
   box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.01), 0px 0px 6.9px rgba(0, 0, 0, 0.018), 0px 0px 14.2px rgba(0, 0, 0, 0.026), 0px 0px 29.2px rgba(0, 0, 0, 0.036), 0px 0px 80px rgba(0, 0, 0, 0.06);
+  padding-bottom: 5px;
 }
 .btn:hover .btn-icon {
   color: #d6d6d6;
@@ -233,6 +244,10 @@ nav .nav__container a:hover h1 {
   align-items: center;
   justify-content: space-around;
 }
+.calculate .calculate__info .calculate__svg img:hover {
+  transform: rotate(360deg);
+  transition: 0.7s all ease-in-out;
+}
 .calculate .calculate__info .calculate__text {
   width: 537px;
   height: 251px;
@@ -309,6 +324,9 @@ nav .nav__container a:hover h1 {
   align-items: center;
   width: 100%;
 }
+.about .about__container .about__info img:hover {
+  transform: scale(1.1);
+}
 .about .about__container .about__info p {
   font-size: 1.5625rem;
   color: #d6d6d6;
@@ -334,14 +352,15 @@ nav .nav__container a:hover h1 {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  gap: 60px;
+  gap: 90px;
 }
 .download .download__container .download__title {
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
-  padding-left: 65px;
 }
 .download .download__container .download__title h1 {
   font-size: 2.5rem;
@@ -586,6 +605,7 @@ nav .nav__container a:hover h1 {
 .upload__header {
   width: 100%;
   padding: 50px 0px;
+  padding-bottom: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -677,13 +697,28 @@ nav .nav__container a:hover h1 {
   width: 100%;
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+.graph__previews .graph__title {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.graph__previews .graph__title h1 {
+  font-size: 2.5rem;
+  font-family: "Avant-bold";
+  font-weight: bold;
 }
 .graph__previews .graph__container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 80px;
 }
 .graph__previews .graph__container .graph__cards {
   display: flex;
@@ -692,15 +727,119 @@ nav .nav__container a:hover h1 {
   width: 100%;
   gap: 20px;
 }
-.graph__previews .graph__container .graph__cards .graph__image {
-  width: 400px;
+.graph__previews .graph__container .graph__cards .graph__content {
+  width: 350px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.graph__previews .graph__container .graph__cards .graph__content h1 {
+  font-size: 1.5625rem;
+  color: #ffffff;
+  font-weight: lighter;
+  font-family: "Avant-light";
+}
+.graph__previews .graph__container .graph__cards .graph__content .graph__img {
+  width: 100%;
   height: 250px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.graph__previews .graph__container .graph__cards .graph__content .graph__img img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
-  border-radius: 10px;
 }
-.graph__previews .graph__container .graph__cards .graph__image img {
+
+.tools__header {
+  width: 100%;
+  padding: 100px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tools__header .tools__container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-direction: column;
+  gap: 90px;
+}
+.tools__header .tools__container .tools__title {
+  width: 100%;
+}
+.tools__header .tools__container .tools__title h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-family: "Avant-bold";
+  font-weight: bold;
+}
+.tools__header .tools__container .tools__title h2 {
+  font-size: 1.5625rem;
+}
+.tools__header .tools__container .tools__title h2 span {
+  color: #ffffff;
+  font-family: "Avant-light";
+  letter-spacing: -2px;
+}
+.tools__header .tools__container .tools__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px 100px;
+}
+@media only screen and (max-width: 1040px) {
+  .tools__header .tools__container .tools__wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.tools__header .tools__container .tools__wrapper .tools__card {
+  width: 490px;
+  height: 410px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 15px;
+}
+.tools__header .tools__container .tools__wrapper .tools__card:hover {
+  transform: scale(1.1);
+  z-index: 50;
+  box-shadow: 0px 0.6px 3px rgba(0, 0, 0, 0.008), 0px 1.4px 7.1px rgba(0, 0, 0, 0.012), 0px 2.6px 13.4px rgba(0, 0, 0, 0.015), 0px 4.7px 23.9px rgba(0, 0, 0, 0.018), 0px 8.8px 44.7px rgba(0, 0, 0, 0.022), 0px 21px 107px rgba(0, 0, 0, 0.03);
+}
+.tools__header .tools__container .tools__wrapper .tools__card .tools__subtitle-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  top: 0;
+}
+.tools__header .tools__container .tools__wrapper .tools__card .tools__subtitle-container:hover {
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+}
+.tools__header .tools__container .tools__wrapper .tools__card .tools__subtitle-container:hover h1 {
+  letter-spacing: 0.1rem;
+  color: #e8b451;
+}
+.tools__header .tools__container .tools__wrapper .tools__card .tools__subtitle-container h1 {
+  font-size: 1.875rem;
+  font-family: "Avant-bold";
+  font-weight: bold;
+  color: #ffffff;
+}
+.tools__header .tools__container .tools__wrapper .tools__card .tools__img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.tools__header .tools__container .tools__wrapper .tools__card .tools__img img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;

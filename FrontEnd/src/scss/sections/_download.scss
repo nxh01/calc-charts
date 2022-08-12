@@ -11,13 +11,14 @@
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    gap: 60px;
+    gap: 90px;
     .download__title {
       width: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 5px;
-      padding-left: 65px;
       h1 {
         font-size: $l-font-size;
         font-weight: bold;
